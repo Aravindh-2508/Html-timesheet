@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>dashboard</title>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/base.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+  
+  @media(max-width: 500px) {
+.ab {
+ margin: 7px 6px 0 20px !important;
+    font-size: 14px !important;
+    color: #748aa1 !important;
+ }}
+  </style>
+  </head>
+<body style="background-color: #fff;">
+
+  	<!-- sidebar start-->
+
+<div id="wrapper">
+
+  <aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+    </div>
+    <ul class="sidebar-nav">
+	  <a class="navbar-brand" href="#">
+    <img src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"  alt="logo"class="rounded-circle" style="width:50px;margin: -45px 0 0 6px;">
+  </a>
+         
+		 <li><a href="#"><i class="fas fa-bar-chart" style="background-color: #4072ee;color: white;padding: 8px 9px 9px 4px;margin-top:85px;"></i></a></li>
+        <li><a href="#"><i class="fa fa-envelope fa-fw" style="color:#b8c5d3;margin-left:-15px;"></i></a></li>
+		<li><a href="#"><i class="far fa-comments" style="color:#b8c5d3;"></i></a></li>
+        <li><a href="#"><i class="far fa-copy" style="color:#b8c5d3;"></i></a></li>
+         <li><a href="#"><i class="fas fa-cog" style="color:#b8c5d3;"></i></a></li>
+		 <a href="#"><i class="fas fa-plus-circle" style="font-size: 26px;color: #29cb97;margin:76px 0px 0 15px;"></i></a>
+    </ul>
+  </aside>
+
+  	<!-- sidebar ends-->
+	
+<!-- title part -->
+
+
+  <div id="navbar-wrapper">
+    <nav class="navbar navbar-inverse" style="padding:0px;>
+      <div class="container">
+<div class="navbar-header" style="background-color:#e0e0e0;padding-left: 13px;">   
+
+       <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars" style="color:black;"></i></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  
+  <section id="content-wrapper">
+  <div class="container">
+      <div class="row">
+	  <div class="col-md-8">
+          <h2 class="content-title" style="margin-left:8%;font-family: sans-serif;">My Dashboard</h2>
+		  
+			<label class="switch" style="margin: -16px -4px -20px -36px;">
+			<input type="checkbox">
+			<span class="slider round"></span>
+			</label>
+			
+<label class="switch" style="margin:-38px -3px -3px 4px; ">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+
+			<h5 style="margin:-31px 52px 0 0;;font-size:14px;float:right;"><a href="#" style="color:#748aa1;">Filter stats</h5></a>
+				  </div>
+				<div class="col-md-4">
+				  <h5 class="ab" style="margin: 7px 0px 0px 15%;">Personal</h5>
+			 <h6 style="margin: -16px 0px 0px 0px;font-size:14px;"><a href="#" style="color:#748aa1;float:right;">Learn More</h6></a>
+			 </div>
+        </div>
+      </div>
+	  </div>
+	  <br><br><br>
+	  <!--title part ends-->
+	  
+<!-- chart part -->
+	  
+    <section class="charts">
+        <div class="container" style="margin-left:8%;">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="chart-container">
+                <h3 style="font-size:20px;color:#31394d;">Total Points</h3>
+				<p style="text-align:end;margin-top:-25px;">from Aug 18 <i class="fa fa-caret-down" style="font-size:10px"></i>to May19  <i class="fa fa-caret-down" style="font-size:10px"></i></p>
+                <canvas id="myChart2"></canvas>
+              </div>
+            </div>
+		  
+		  <!-- bar chart -->
+		  <div class="col-md-4">
+       <div class="container" style="background-color:#4072ee;border-radius:5px;">		   
+		   <div class="chart-container"><br>
+                <h6 style="color:#ffffff;">My Card</h6>
+			<p style="text-align:end;margin-top:-32px;color:#ffffff;">for <b>September 2019</b>  <i class="fa fa-caret-down" style="font-size:13px"></i></p><br>
+
+                <canvas id="myChart"></canvas>
+              </div>
+			  </div>
+			  
+			 
+   <div class="container">
+
+<div class="wrapper">
+
+    <div class="container-calendar">
+        <h3 id="monthAndYear"></h3>
+		<div class="footer-container-calendar">
+             <label><b>Calender</b></label>
+             <select id="month" onchange="jump()" style="margin-left:23%;">
+                 <option value=0>Jan</option>
+                 <option value=1>Feb</option>
+                 <option value=2>Mar</option>
+                 <option value=3>Apr</option>
+                 <option value=4>May</option>
+                 <option value=5>Jun</option>
+                 <option value=6>Jul</option>
+                 <option value=7>Aug</option>
+                 <option value=8>Sep</option>
+                 <option value=9>Oct</option>
+                 <option value=10>Nov</option>
+                 <option value=11>Dec</option>
+             </select>
+             <select id="year" onchange="jump()"></select>       
+        </div>
+        
+        
+        
+        <table class="table-calendar" id="calendar" data-lang="en">
+            <thead id="thead-month"></thead>
+            <tbody id="calendar-body"></tbody>
+        </table>
+        
+        
+
+    </div>
+</div>
+
+
+</div>
+
+
+            </div>
+		  
+		  
+		  </div>
+		  </div>
+<!-- bar chart end-->
+		  
+		  
+        </div><!-- container ends-->
+      </section>
+  <br><br>
+	  <!-- chart part end-->
+	  
+	<section class="card-group">
+        <div class="container" style="margin-left:8%;">
+          <div class="row">
+	  <div class="col-md-4">
+	  <h5>Active Users</h5>
+	  <p style="text-align:end;margin-top:-32px;">for <b>August 2019</b>  <i class="fa fa-caret-down" style="font-size:13px"></i></p>
+	  <div class="info" style="margin-left:16px;">
+	  <div class="row">
+	  <div class=col-md-2">
+	 <img src="assets/images/icon1.png" alt="logo"class="rounded-circle" style="width:50px;background-color:#29cb97;"></div>
+	  <div class="col-md-10"> <span><b>Elliot Moler</b><br>
+	  Copenhagen,Denmark<a href="#"><i class="fas fa-ellipsis-h" style="color:#b8c5d3;float:right;"></i></span></a></div>
+	   </div>
+	   <br>
+	   <div class="progress" style="height:7px">
+    <div class="progress-bar" style="width:70%;height:7px"></div>
+  </div><br>
+  	<p>Professional Level 15</p>
+<h6 style="text-align:end;margin-top:-39px;">4723 Points</h6>
+	 </div>
+	  
+	  <br>
+	  
+	   <div class="info">
+	   <div class="row">
+	   <div class="col-md-2">
+	 <img src="assets/images/icon2.png" alt="logo"class="rounded-circle" style="width:50px;"></div>
+	   <div class="col-md-10"><span><b>Olivia Pedersen</b><br>
+	   Copenhagen,Denmark<a href="#"><i class="fas fa-ellipsis-h" style="color:#b8c5d3;float:right;"></i></span></a></div>
+	   </div>
+	   <br>
+	   <div class="progress" style="height:7px">
+    <div class="progress-bar" style="width:55%;height:7px;background-color:#4072ee;"></div>
+  </div><br>
+  	<p>Professional Level 11</p>
+<h6 style="text-align:end;margin-top:-39px;">2339 Points</h6>
+	 </div>
+	  <br><br>
+	  
+	  
+	   <div class="info">
+	<div class="row">
+	<div class="col-md-2">
+	<img src="assets/images/icon2.png" alt="logo"class="rounded-circle" style="width:50px;"></div>
+	   <div class="col-md-10"><span><b>Niklad Doring</b><br>
+	   Berlin,Germany<a href="#"><i class="fas fa-ellipsis-h" style="color:#b8c5d3;float:right;"></i></span></a></div>
+	   </div>
+	   <br>
+	   <div class="progress" style="height:7px">
+    <div class="progress-bar" style="width:45%;height:7px;background-color:#b558f6;"></div>
+  </div><br>
+  	<p>Professional Level 6</p>
+<h6 style="text-align:end;margin-top:-39px;">1884 Points</h6>
+	 </div>
+	  <br><br>
+	  </div>
+	  
+	  
+	  <!-- second card -->
+	  
+	  <div class="col-md-4">
+	  <h5>Top Cities</h5>
+	  <p style="text-align:end;margin-top:-32px;">for <b>September 2019</b>  <i class="fa fa-caret-down" style="font-size:13px"></i></p>
+	  <div class="info">
+      <table>
+	  <tr>
+	  <td class="pad">0%</td>
+	  <td class="pad">25%</td>
+	  <td class="pad">50%</td>
+	  <td class="pad">75%</td>
+	  <td class="pad">100%</td>
+	  </tr>
+	  </table>
+	  <br>
+	  <div class="progress" style="height:14px;background-color:white;">
+    <div class="progress-bar" style="width:63%;height:14pxpx;background-color:#b558f6;"></div>
+	<span style="margin-left:10px;">63%</span>
+  </div><br>
+  
+ <div class="progress" style="height:14px;background-color:white;">
+    <div class="progress-bar" style="width:47%;height:14pxpx;background-color:#29cb97;"></div>
+	<span style="margin-left:10px;">47%</span>
+  </div><br>
+  
+   <div class="progress" style="height:14px;background-color:white;">
+    <div class="progress-bar" style="width:52%;height:14pxpx;background-color:#fec400;"></div>
+	<span style="margin-left:10px;">52%</span>
+  </div><br>
+	 
+	  <div class="progress" style="height:14px;background-color:white;">
+    <div class="progress-bar" style="width:81%;height:14pxpx;background-color:#4072ee;"></div>
+	<span style="margin-left:10px;">81%</span>
+  </div><br>
+	 </div>
+	 <div class="info">
+	<i class="far fa-circle" style="font-size:25px;color:#4072ee"></i>
+<span>Copenhagen, Denmark</span>
+<p style="text-align:end;margin-top:-23px;"><b>81.57%</b></p>
+  </div>
+	 
+	<div class="info">
+	<i class="far fa-circle" style="font-size:25px;color:#b558f6;"></i>
+<span>Berlin, Germany</span>
+<p style="text-align:end;margin-top:-23px;"><b>63.25%</b></p>
+  </div>
+	
+	<div class="info">
+	<i class="far fa-circle" style="font-size:25px;color:#fec400;"></i>
+<span>Belgrade, Serbia</span>
+<p style="text-align:end;margin-top:-23px;"><b>52.95%</b></p>
+  </div>
+  
+  <div class="info">
+	<i class="far fa-circle" style="font-size:25px;color:#29cb97;"></i>
+<span>Paris, France</span>
+<p style="text-align:end;margin-top:-23px;"><b>47.29%</b></p>
+  </div>
+	
+	 </div><!--col -->
+	 <!-- 3rd card-->
+	 	  <div class="col-md-4">
+		   <h5>Popular Topics</h5>
+	  <p style="text-align:end;margin-top:-32px;color:#748aa1;"><a href="#" style="color:#748aa1;">View All</a></p><br>
+	  		   <div class="info">
+			   		   <div class="icon">
+				<i class="fas fa-headphones-alt fas-fw bg-primary"></i>
+				 &nbsp;&nbsp;<span><b>Basket Ball</b></span><br>
+                 &nbsp;&nbsp;<span>1423 Questions<a href="#"><i class="fas fa-ellipsis-h" style="color:#b8c5d3;float:right;"></i></a></span>
+		  </div>
+		 </div><br>
+		  
+		   <div class="info">
+			   		   <div class="icon" style="margin: 11px 0px 0px -1px;">
+						<i class="far fa-clock" style="background-color:#29cb97;"></i>
+				 &nbsp;&nbsp;<span><b>Smartwatch</b></span><br>
+                 &nbsp;&nbsp;<span>1299 Questions<a href="#"><i class="fas fa-ellipsis-h" style="color:#b8c5d3;float:right;"></i></a></span>
+		  </div>
+		 </div><br>
+		  
+		  
+		  <div class="info">
+			   		   <div class="icon" style="margin: 11px 0px 0px -1px;">
+				<i class="fas fa-gamepad" style="background-color:#fec400;margin-left:-3px;"></i>
+				 &nbsp;&nbsp;<span><b>Games</b></span><br>
+                 &nbsp;&nbsp;<span>983 Questions<a href="#"><i class="fas fa-ellipsis-h" style="color:#b8c5d3;float:right;"></i></a></span>
+		  </div>
+		 </div> <br>
+		  
+		  
+		<div class="info">
+			   		   <div class="icon" style="margin: 11px 0px 0px -1px;">
+					<i class="fas fa-camera" style="background-color:#4072ee;"></i>
+				 &nbsp;&nbsp;<span><b>Photography</b></span><br>
+                 &nbsp;&nbsp;<span>788 Questions<a href="#"><i class="fas fa-ellipsis-h" style="color:#b8c5d3;float:right;"></i></a></span>
+		  </div>
+		 </div>  <br> 
+		  
+		  
+		  
+		 <div class="info">
+			   		   <div class="icon" style="margin: 11px 0px 0px -1px;">
+					   <i class="fab fa-cc-mastercard" style="background-color:#29cb97;"></i>
+				 &nbsp;&nbsp;<span><b>Finance</b></span><br>
+                 &nbsp;&nbsp;<span>632 Questions<a href="#"><i class="fas fa-ellipsis-h" style="color:#b8c5d3;float:right;"></i></a></span>
+		  </div>
+		 </div>  <br>
+		  
+</div>
+	  </div>
+	  </div>
+	  </section>
+	  
+	  
+	  
+	  
+	  
+	  
+  </section>
+  <script src='http://code.jquery.com/jquery-latest.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+      <script src='js/main.js'></script>
+<script>
+$("#sidebar-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+<!-- chart script-->
+/*global $, console*/
+/*
+  By Mostafa Omar
+	https://www.facebook.com/MostafaOmarIbrahiem
+*/
+$(function () {
+
+  'use strict';
+
+  (function () {
+
+    var aside = $('.side-nav'),
+
+        showAsideBtn = $('.show-side-btn'),
+
+        contents = $('#contents');
+
+    showAsideBtn.on("click", function () {
+
+      $("#" + $(this).data('show')).toggleClass('show-side-nav');
+
+      contents.toggleClass('margin');
+
+    });
+
+    if ($(window).width() <= 767) {
+
+      aside.addClass('show-side-nav');
+
+    }
+    $(window).on('resize', function () {
+
+      if ($(window).width() > 767) {
+
+        aside.removeClass('show-side-nav');
+
+      }
+
+    });
+
+    // dropdown menu in the side nav
+    var slideNavDropdown = $('.side-nav-dropdown');
+
+    $('.side-nav .categories li').on('click', function () {
+
+      $(this).toggleClass('opend').siblings().removeClass('opend');
+
+      if ($(this).hasClass('opend')) {
+
+        $(this).find('.side-nav-dropdown').slideToggle('fast');
+
+        $(this).siblings().find('.side-nav-dropdown').slideUp('fast');
+
+      } else {
+
+        $(this).find('.side-nav-dropdown').slideUp('fast');
+
+      }
+
+    });
+
+    $('.side-nav .close-aside').on('click', function () {
+
+      $('#' + $(this).data('close')).addClass('show-side-nav');
+
+      contents.removeClass('margin');
+
+    });
+
+  }());
+
+  // Start chart
+
+  var chart = document.getElementById('myChart');
+  Chart.defaults.global.animation.duration = 2000; // Animation duration
+  Chart.defaults.global.title.display = false; // Remove title
+  Chart.defaults.global.title.text = "Chart"; // Title
+  Chart.defaults.global.title.position = 'bottom'; // Title position
+  Chart.defaults.global.defaultFontColor = '#999'; // Font color
+  Chart.defaults.global.defaultFontSize = 10; // Font size for every label
+
+  // Chart.defaults.global.tooltips.backgroundColor = '#FFF'; // Tooltips background color
+  Chart.defaults.global.tooltips.borderColor = 'white'; // Tooltips border color
+  Chart.defaults.global.legend.labels.padding = 0;
+  Chart.defaults.scale.ticks.beginAtZero = true;
+  Chart.defaults.scale.gridLines.zeroLineColor = 'rgba(255, 255, 255, 0.1)';
+  Chart.defaults.scale.gridLines.color = 'rgba(255, 255, 255, 0.02)';
+
+  Chart.defaults.global.legend.display = false;
+
+  var myChart = new Chart(chart, {
+    type: 'bar',
+    data: {
+      labels: ["","","","","","","","","","","",''],
+      datasets: [{
+        label: "Lost",
+        fill: false,
+        lineTension: 0,
+        data: [15,18,18,12,25,30,25,20,23,35,40,20],
+        pointBorderColor:"#eee",
+        borderColor: '#fff',
+        borderWidth: 1,
+        showLine: true,
+      }, {
+        label: "Succes",
+        fill: false,
+        lineTension: 0,
+        startAngle: 2,
+        data: [20,30,20,24,20,27,30,45,19,25,23,60],
+        // , '#ff6384', '#4bc0c0', '#ffcd56', '#457ba1'
+        backgroundColor: "#00000026",
+        pointBorderColor: "#eee",
+        borderColor: '#fff',
+        borderWidth: 1,
+        showLine: true,
+      }]
+    },
+  });
+  //  Chart ( 2 )
+
+
+  var Chart2 = document.getElementById('myChart2').getContext('2d');
+  var chart = new Chart(Chart2, {
+    type: 'line',
+    data: {
+      labels: ["Aug 18", "Sep 18", "Oct 18", "Nov 18", 'Dec 18', 'Jan 18', 'Feb 18', 'Mar 18','Apr 18','May 18'],
+      datasets: [{
+        label: "My First dataset",
+        backgroundColor: '#',
+        borderColor: '#4072ee',
+        borderWidth: 2,
+        pointBorderColor: false,
+        data: [5, 10, 5, 8, 10, 20, 15, 10,15,8],
+        fill: false,
+        lineTension: .4,
+      }]
+    },
+
+    // Configuration options
+    options: {
+      title: {
+        display: false
+      }
+    }
+  });
+
+
+  console.log(Chart.defaults.global);
+
+  var chart = document.getElementById('chart3');
+  var myChart = new Chart(chart, {
+    type: 'line',
+    data: {
+      labels: ["One", "Two", "Three", "Four", "Five", 'Six', "Seven", "Eight"],
+      datasets: [{
+        label: "Lost",
+        fill: false,
+        lineTension: .5,
+        pointBorderColor: "transparent",
+        pointColor: "white",
+        borderColor: '#d9534f',
+        borderWidth: 0,
+        showLine: true,
+        data: [0, 40, 10, 30, 10, 20, 15, 20],
+        pointBackgroundColor: 'transparent',
+      },{
+        label: "Lost",
+        fill: false,
+        lineTension: .5,
+        pointColor: "white",
+        borderColor: '#5cb85c',
+        borderWidth: 0,
+        showLine: true,
+        data: [40, 0, 20, 10, 25, 15, 30, 0],
+        pointBackgroundColor: 'transparent',
+      },
+                 {
+                   label: "Lost",
+                   fill: false,
+                   lineTension: .5,
+                   pointColor: "white",
+                   borderColor: '#f0ad4e',
+                   borderWidth: 0,
+                   showLine: true,
+                   data: [10, 40, 20, 5, 35, 15, 35, 0],
+                   pointBackgroundColor: 'transparent',
+                 },
+                 {
+                   label: "Lost",
+                   fill: false,
+                   lineTension: .5,
+                   pointColor: "white",
+                   borderColor: '#337ab7',
+                   borderWidth: 0,
+                   showLine: true,
+                   data: [0, 30, 10, 25, 10, 40, 20, 0],
+                   pointBackgroundColor: 'transparent',
+                 }]
+    },
+  });
+
+});
+<!-- chart script end-->
+
+function generate_year_range(start, end) {
+    var years = "";
+    for (var year = start; year <= end; year++) {
+        years += "<option value='" + year + "'>" + year + "</option>";
+    }
+    return years;
+}
+
+today = new Date();
+currentMonth = today.getMonth();
+currentYear = today.getFullYear();
+selectYear = document.getElementById("year");
+selectMonth = document.getElementById("month");
+
+
+createYear = generate_year_range(1970, 2050);
+/** or
+ * createYear = generate_year_range( 1970, currentYear );
+ */
+
+document.getElementById("year").innerHTML = createYear;
+
+var calendar = document.getElementById("calendar");
+var lang = calendar.getAttribute('data-lang');
+
+var months = "";
+var days = "";
+
+var monthDefault = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+var dayDefault = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+if (lang == "en") {
+    months = monthDefault;
+    days = dayDefault;
+} else if (lang == "id") {
+    months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+    days = ["Ming", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
+} else if (lang == "fr") {
+    months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+    days = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+} else {
+    months = monthDefault;
+    days = dayDefault;
+}
+
+
+var $dataHead = "<tr>";
+for (dhead in days) {
+    $dataHead += "<th data-days='" + days[dhead] + "'>" + days[dhead] + "</th>";
+}
+$dataHead += "</tr>";
+
+//alert($dataHead);
+document.getElementById("thead-month").innerHTML = $dataHead;
+
+
+monthAndYear = document.getElementById("monthAndYear");
+showCalendar(currentMonth, currentYear);
+
+
+
+function next() {
+    currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
+    currentMonth = (currentMonth + 1) % 12;
+    showCalendar(currentMonth, currentYear);
+}
+
+function previous() {
+    currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
+    currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
+    showCalendar(currentMonth, currentYear);
+}
+
+function jump() {
+    currentYear = parseInt(selectYear.value);
+    currentMonth = parseInt(selectMonth.value);
+    showCalendar(currentMonth, currentYear);
+}
+
+function showCalendar(month, year) {
+
+    let firstDay = ( new Date( year, month ) ).getDay();
+
+    tbl = document.getElementById("calendar-body");
+
+    
+    tbl.innerHTML = "";
+
+    
+    monthAndYear.innerHTML = months[month] + " " + year;
+    selectYear.value = year;
+    selectMonth.value = month;
+
+    // creating all cells
+    let date = 1;
+    for (let i = 0; i < 6; i++) {
+        
+        let row = document.createElement("tr");
+
+        
+        for (let j = 0; j < 7; j++) {
+            if (i === 0 && j < firstDay) {
+                cell = document.createElement("td");
+                cellText = document.createTextNode("");
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            } else if (date > daysInMonth(month, year)) {
+                break;
+            } else {
+                cell = document.createElement("td");
+                cell.setAttribute("data-date", date);
+                cell.setAttribute("data-month", month + 1);
+                cell.setAttribute("data-year", year);
+                cell.setAttribute("data-month_name", months[month]);
+                cell.className = "date-picker";
+                cell.innerHTML = "<span>" + date + "</span>";
+
+                if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+                    cell.className = "date-picker selected";
+                }
+                row.appendChild(cell);
+                date++;
+            }
+
+
+        }
+
+        tbl.appendChild(row);
+    }
+
+}
+
+function daysInMonth(iMonth, iYear) {
+    return 32 - new Date(iYear, iMonth, 32).getDate();
+}
+
+
+
+</script>
+  
+
+</body>
+</html>
